@@ -1,0 +1,881 @@
+/* 
+    1- General css style
+    2-Header style
+    3-Home section
+    4-About section
+    5-portofolio section
+    6-offers section
+    7-services section
+    8-numbers section
+    9-price section
+    10-testimonial section
+    11-our team section
+    12-recent-news section
+    13-form section section
+    14-footer section
+*/
+
+/* 1- General css style */
+* {
+    font-family: "Varela Round", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --main-color : #6195ff;
+    --white-color : white;
+    --section-padding: 90px;
+    
+}
+/* General css style */
+/* -------------------------- */
+
+/* 2- Header css style start*/
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.navbar .logo {
+    float: left;
+}
+
+.navbar .nav {
+    float: right;
+}
+
+.navbar .nav > li {
+    display: inline-block;
+
+}
+
+.navbar .nav > li > a {
+    color: var(--white-color);
+    display: block;
+    padding: 30px 15px;
+}
+.navbar .nav > li > a::after , .navbar .nav li a.active::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: var(--main-color);
+}
+.navbar .nav > li > a::after{
+    width: 0;
+}
+.navbar .nav > li a.active::after {
+    width: 100%;
+}
+.navbar .nav > li > a:hover:after {
+    width: 100%;
+    transition: width 0.5s;
+}
+.dropdown-menu {
+    position: relative;
+}
+.dropdown {
+    border-radius: 5px;
+    background-color: var(--main-color);
+    position: absolute;
+    list-style: none;
+    font-size: 15px;
+    width: 100px;
+    text-align: center;
+    top: 80%;
+    left: 15%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s , visibility 0.5s;
+}
+.dropdown a {
+    display: block;
+    color: var(--white-color);
+    padding: 10px 5px;
+ 
+}
+
+
+.dropdown-menu:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Header css style end*/
+/* -------------------------------- */
+
+/* 3-Home css style */
+
+.home {
+    height: 100vh;
+    background-image: url(../images/background1.jpg);
+    background-size: cover;
+    position: relative;
+}
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.home-title {
+    color: var(--white-color);
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.home-disc {
+    margin: 10px 0px;
+    color: var(--white-color);
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.3;
+}
+
+.home .btn {
+    width: 125px;
+    padding: 12px 5px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+.btn-start {
+    background-color: var(--white-color);
+    margin-right: 3px;
+}
+.btn-learn {
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+/* Home css style end */
+/* -------------------------------- */
+
+/* 4-About section css style start */
+.about {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.about .about-title ,
+.port-title ,
+.offer-title ,
+.our-team-title ,
+.pricing-title ,
+.recent-news-title ,
+.form-title  {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+
+.about-title-line ,
+.port-title-line ,
+.pricing-title-line ,
+.team-title-line ,
+.pricing-title-line ,
+.offer-title-line,
+.team-title-line,
+.recent-news-title-line,
+.form-title-line {
+    display: block;
+    height: 3px;
+    width: 80px;
+    background-color: var(--main-color);
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.about-item {
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px solid rgb(86, 86, 86);
+    border-radius: 15px;
+    padding: 55px 20px;
+}
+
+.about-item.mg , .port-item.mg {
+    margin: 0% 5%;
+}
+
+.about-item .icon {
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.about-item-title , .about-item-par {
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.about-item-par {
+    line-height: 1.3;
+    letter-spacing: 2px;
+}
+
+.about-item a {
+    border: 2px solid var(--main-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+.about-item:hover .about-item-title , 
+.about-item:hover .about-item-par , 
+.about-item:hover a {
+    color: var(--white-color);
+}
+
+.about-item:hover a {
+    background-color: var(--main-color);
+    border-radius:5px;
+    display: inline-block;
+    padding: 10px;
+}
+
+/* About section css style end */
+/* -------------------------------------- */
+
+/* 5-portofolio works section css style start */
+
+.portofolio {
+    background-color: #d8d8d8;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.port-item {
+    width: 30%;
+    float: left;
+    position: relative;
+    padding: 20px;
+    border: 1.5px solid #abc6fd;
+
+}
+
+.port-item img {
+    width: 100%;
+    
+}
+
+.port-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.port-layer-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+
+.port-layer-info .port-layer-title {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--main-color);
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    top: -10px;
+    transition: top 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.port-layer .port-layer-par {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin-bottom: 11px;
+    position: relative;
+    top: -10px;
+    transition: top 0.5s , opacity 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0.3s;
+}
+
+.port-layer-info a {
+    color: var(--white-color);
+    display: inline-block;
+    background-color: var(--main-color);
+    padding: 6px;
+    position: relative;
+    top: -10px;
+    transition: top 0.5s , opacity 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0.5s;
+}
+
+.port-item:hover .port-layer-title ,
+.port-item:hover .port-layer-par ,
+.port-item:hover .port-layer-info a {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+} 
+
+.port-layer {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s , visibilty 0.5s;
+}
+
+.port-item:hover .port-layer {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* portofolio section css style end */
+/* -------------------------------------- */
+
+/* 6-offer works section css style start */
+.offer {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.offer-item {
+    width: 30%;
+    float: left;
+    border: 1px solid rgb(86, 86, 86);
+    border-radius: 15px;
+    padding: 20px 20px 20px 70px;
+    position: relative;
+}
+    
+
+.offer-item.mg {
+    margin: 0 5%;
+}
+
+.offer-item .icon {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    color: var(--main-color);
+}
+
+.offer-item-title {
+    text-transform: capitalize;
+}
+
+.offer-item-par {
+    line-height: 1.2;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.offer-item:hover .offer-item-title ,
+.offer-item:hover .offer-item-par 
+{
+    color: var(--main-color);
+}
+
+/* offer section css style end */
+/* ----------------------------------- */
+
+/* 7-service section css style start */
+
+.service {
+    background-color: #d8d8d8;   
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.service-disc ,
+.service-item {
+    float: left;
+    width: 45%;
+}
+
+.service-disc {
+    margin-right: 10%;
+}
+.service-disc {
+    text-align: center;
+}
+.service-disc .sevice-title-line {
+    margin: auto;
+    margin-bottom: 25px;
+    display: block;
+    width: 220px;
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+.service-par {
+    color: #999;
+}
+
+.service-list li {
+    color: #999;
+}
+.service-list li i {
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    padding: 3.5px;
+    color: var(--main-color);
+    margin-right: 10px;
+
+}
+
+.service-item-img img {
+    width: 100%;
+    height: 400px;
+}
+.service-bullets {
+    text-align: center;
+}
+.service-bullets li {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #999;
+    border-radius: 50%;
+}
+
+.service-bullets li.active {
+    background-color: var(--main-color);
+}
+
+.service-bullets li:hover {
+    background-color: var(--main-color);
+}
+
+/* service section css style end */
+/* -------------------------------- */
+
+/* 8-Numbers section css style start */
+
+.number {
+    background-image: url(../images/background2.jpg);
+    height: 300px;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.overlay-num {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 300px;
+}
+.number-item {
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.number-item .icon {
+    color: var(--main-color);
+}
+
+.number-item .number-item-title {
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--white-color);
+}
+
+.number-item .number-item-span {
+    color: var(--white-color);
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+/* Number section css style end */
+/* -------------------------------- */
+
+/* 9-price section css style start */
+.pricing {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.pricing-header {
+    text-align: center;
+}
+.pricing-table {
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.pricing-table.mg {
+    margin: 0 5%;
+}
+.pricing-table-title {
+    font-size: 14px;
+    color: #999;
+    text-transform: capitalize;
+    transition: color 0.3s;
+    margin-bottom: 15px;
+}
+
+.price {
+    border: 3px solid var(--main-color);
+    width: 90px;
+    height: 90px;
+    padding: 22px 0;
+    border-radius: 50%;
+    margin:0 auto 15px auto;
+}
+.price .dollar {
+    transition: color 0.5s;
+}
+.price .month {
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
+.price-list {
+    transition: color 0.5s;
+}
+
+.price-list li {
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.purshase {
+    border: 1px solid var(--main-color);
+    background-color: transparent;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    width: 100px;
+    padding: 5px;
+    color: var(--main-color);
+}
+
+.pricing-table:hover .dollar ,
+.pricing-table:hover  .month ,
+.pricing-table:hover .pricing-table-title ,
+.pricing-table:hover .price-list 
+{
+    color: var(--main-color);
+}
+/* price section css style end */
+/* -------------------------------- */
+
+/* 10-testimonial section css style start */
+
+.test {
+    background-image: url("../images/background3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 400px;
+}
+.overlay-test {
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.test-content {
+    margin-top: 170px;
+    float: left;
+    width: 45%;
+    color: var(--white-color);
+    position: relative;
+}
+
+.test-content.mg {
+    margin-right: 10%;
+}
+
+.test-content .person ,
+.test-content .person-job {
+    text-transform: uppercase;
+    margin-left: 80px;
+}
+.test-content img {
+    position: absolute;
+    top: -30px;
+    border-radius: 50%;
+}
+.test-content .person-job {
+    color: var(--main-color);
+}
+
+.test-content .person-disc {
+    line-height: 1.3;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+/* testimonial section css style end */
+/* -------------------------------- */
+
+/* 11-our team section css style start */
+.team {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.team-item {
+    width: 30%;
+    float: left;
+    background-color: #d8d8d8;
+    border-radius: 15px;
+    padding: 10px;
+}
+.team-item.mg {
+    margin: 0 5%;
+}
+.team-img {
+    margin: auto;
+    position: relative;
+    width: 90%;
+}
+.team-img img {
+    width: 100%;
+}
+.team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.team-overlay a {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    margin-left: auto;
+}
+.team-overlay a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.team-info {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.team-item:hover .team-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+.team-item.tb-effect::after {
+    border-radius: 0;
+}
+.team-item.tb-effect {
+    border-radius: 0;
+    z-index: 1;
+}
+
+.team-item:hover .team-title {
+    color: var(--white-color);
+}
+
+.team-item:hover .team-job {
+    color: var(--main-color) ;    
+}
+
+/* our team section css style end */
+/* -------------------------------- */
+
+/* 12-Recent news section css style start */
+.recent-news {
+    background-color: #d8d8d8;   
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.blog-item {
+    width: 30%;
+    background-color: var(--white-color);
+    float: left;
+}
+
+.blog-item-img {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.blog-item-img img {
+    width: 100%;
+}
+
+.blog-item.mg {
+    margin: 0 5%;
+}
+.blog-info {
+    padding: 20px;
+}
+.blog-list {
+    margin-left: 20px;
+}
+.blog-list li {
+    display: inline-block;
+}
+.blog-list li.mg {
+    margin: 0 5px;
+}
+.blog-list i {
+    margin-right: 5px;
+}
+.blog-par {
+    margin-top: 20px;
+    line-height: 1.3;
+    letter-spacing: 2px;
+}
+
+.blog-info button {
+    border: 1px var(--main-color) solid;
+    background-color: var(--white-color);
+    padding: 7px;
+    text-transform: capitalize;
+    color: var(--main-color);
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* recent news section css style end */
+/* -------------------------------- */
+
+/* 13-form section css style start */ 
+.blog-form {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.form-item {
+    width: 30%;
+    float: left;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-item.mg {
+    margin: 0 5%;
+}
+
+.form-item i {
+    font-size: 40px;
+    color: var(--main-color);
+}
+.form-item h3 {
+    text-transform: capitalize;
+    margin: 15px 0;
+}
+
+.form-item h5 {
+    color: #333;
+}
+form {
+    width: 70%;
+    margin: auto;
+
+}
+
+input, textarea {
+    border: 0;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.name input, .email input {
+    width: 49%;
+    float: left;
+    margin-bottom: 10px;
+}
+.name input {
+    margin-right: 2%;
+}
+
+.subject input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 10px;
+
+}
+
+form button {
+    border: 0;
+    border-radius: 6px;
+    background-color: var(--main-color);
+    font-size: 15px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 150px;
+    padding: 10px;
+    margin: auto;
+    display: block;
+}
+
+/* form section css style end */
+/* -------------------------------- */
+
+/* 14-footer section css style start */ 
+
+.footer {
+    background-color: #1c1d21;
+    text-align: center;
+    padding: 40px;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.footer-links li a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: var(--white-color);
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+
+.footer-links li a i {
+    line-height: 50px;
+}
+
+
+.footer p {
+    color: var(--white-color);
+    padding-top: 10px;
+}
